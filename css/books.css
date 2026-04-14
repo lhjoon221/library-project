@@ -1,0 +1,365 @@
+@charset "utf-8";
+.books-bg {
+    height: 350px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+    margin-bottom: 60px;
+    color: #fff;
+    text-align: center;
+    padding-top: 110px; 
+    box-sizing: border-box;
+}
+.visual-txt h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.visual-txt p {
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.sec-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sec-title h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.sec-title p {
+    font-size: 16px;
+    color: #888;
+}
+
+.sec-recommend {
+    padding: 100px 0;
+    background-color: #fcfaf8;
+}
+
+.recommend-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rec-img {
+    flex: 0 0 45%;
+    height: 550px;
+}
+
+.rec-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rec-txt {
+    flex: 1;
+    padding: 60px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #876353;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.rec-txt h4 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.rec-txt .author {
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.quote {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid #eee;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #876353;
+    color: #876353;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-more:hover {
+    background: #876353;
+    color: #fff;
+}
+
+.sec-new-books {
+    padding: 100px 0;
+}
+
+.new-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.book-card {
+    transition: 0.3s;
+}
+
+.thumb {
+    position: relative;
+    height: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.book-card:hover .thumb img {
+    transform: scale(1.1);
+}
+
+.new-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff5e5e;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.info h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.info p {
+    font-size: 14px;
+    color: #888;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 850px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    animation: modalSlide 0.4s ease-out;
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #999;
+    z-index: 10;
+}
+
+.modal-body {
+    display: flex;
+    padding: 50px;
+    gap: 40px;
+}
+
+.modal-left { 
+    flex: 0 0 300px;
+}
+
+.modal-left img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.15);
+}
+
+.modal-right { 
+    flex: 1; 
+}
+
+#modalTitle { 
+    font-family: 'Noto Serif KR', serif; 
+    font-size: 32px; 
+    margin: 10px 0 20px; 
+}
+
+.m-info { 
+    color: #888; 
+    font-size: 15px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 20px; 
+}
+
+.m-desc { 
+    margin: 25px 0; 
+}
+
+.m-desc p { 
+    color: #555; 
+    line-height: 1.8; 
+}
+
+.m-status-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-borrow {
+    padding: 12px 30px;
+    background: #876353;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tag.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.book-card {
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.thumb {
+    height: 350px;
+    margin-bottom: 15px;
+}
+.info h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.info p::before {
+    content: 'BY. ';
+    font-size: 10px;
+    font-weight: 700;
+    color: #876353;
+}
+.more-wrap {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    padding: 12px 50px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    color: #666;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-view-all:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+@media (max-width: 1024px) {
+    .recommend-box {
+        flex-direction: column;
+    }
+    
+    .rec-img {
+        flex: 0 0 300px;
+        width: 100%;
+    }
+    
+    .new-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

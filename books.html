@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Pages Library - 추천/신작</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/books.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="index.html" class="logo-text">OPEN PAGES LIBRARY</a></h1>
+                <nav class="gnb-area">
+                    <ul class="gnb">
+                        <li><a href="search.html">도서검색</a></li>
+                        <li><a href="books.html">추천/신작</a></li>
+                        <li><a href="community.html">커뮤니티</a></li>
+                        <li><a href="guide.html">이용안내</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="visual-common books-bg">
+                <div class="inner">
+                    <div class="visual-txt">
+                        <h2>추천 / 신작</h2>
+                        <p>사서가 엄선한 도서와 이번 달 새롭게 들어온 지식을 만나보세요.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-recommend">
+                <div class="inner">
+                    <div class="sec-title">
+                        <h3>Editor's Choice</h3>
+                        <p>이달에 꼭 읽어봐야 할 추천 도서입니다.</p>
+                    </div>
+
+                    <div class="recommend-box">
+                        <div class="rec-img">
+                            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=800"
+                                alt="추천도서">
+                        </div>
+                        <div class="rec-txt">
+                            <span class="badge">오늘의 추천</span>
+                            <h4>잊혀진 문장들의 기록</h4>
+                            <p class="author">저자: 이현우 | 출판사: 기억의 숲</p>
+                            <div class="quote">
+                                "책 속에 적힌 한 줄의 문장이 당신의 인생을 바꿀 수도 있습니다.
+                                바쁜 일상 속에서 잊고 지냈던 소중한 가치들을 다시 일깨워주는 책입니다."
+                            </div>
+                            <a href="#" class="btn-more">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-new-books">
+                <div class="inner">
+                    <div class="sec-title">
+                        <h3>New Arrivals</h3>
+                        <p>우리 도서관에 갓 도착한 따끈따끈한 신작들입니다.</p>
+                    </div>
+
+                    <ul class="new-list">
+                        <li>
+                            <div class="book-card">
+                                <div class="thumb">
+                                    <img src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                        alt="신작">
+                                    <span class="new-tag">NEW</span>
+                                </div>
+                                <div class="info">
+                                    <h5>언어의 온도</h5>
+                                    <p>저자: 이기주</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="book-card">
+                                <div class="thumb">
+                                    <img src="https://images.pexels.com/photos/768125/pexels-photo-768125.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                        alt="신작">
+                                    <span class="new-tag">NEW</span>
+                                </div>
+                                <div class="info">
+                                    <h5>디지털 시대의 인문학</h5>
+                                    <p>저자: 박철수</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="book-card">
+                                <div class="thumb">
+                                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                        alt="신작">
+                                    <span class="new-tag">NEW</span>
+                                </div>
+                                <div class="info">
+                                    <h5>자바스크립트 마스터</h5>
+                                    <p>저자: 최개발</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="book-card">
+                                <div class="thumb">
+                                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                        alt="신작">
+                                    <span class="new-tag">NEW</span>
+                                </div>
+                                <div class="info">
+                                    <h5>내일의 경제</h5>
+                                    <p>저자: 정경제</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="more-wrap">
+                        <a href="#" class="btn-view-all">더 많은 신착 도서 보기 +</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <p>Open Pages library &copy; All rights reserved. 2026</p>
+            </div>
+        </footer>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <img id="modalImg" src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=800"
+                            alt="도서 이미지">
+                    </div>
+                    <div class="modal-right">
+                        <span class="badge">추천 도서</span>
+                        <h3 id="modalTitle">잊혀진 문장들의 기록</h3>
+                        <p class="m-info">저자: 이현우 | 출판사: 기억의 숲 | 발행일: 2026.03</p>
+                        <div class="m-desc">
+                            <p>바쁜 현대 사회에서 우리가 놓치고 살았던 따뜻한 문장들을 모은 에세이입니다. 작가가 직접 고른 100가지 문장과 그에 얽힌 개인적인 에피소드들이 읽는 이의
+                                마음을 위로합니다.</p>
+                        </div>
+                        <div class="m-status-box">
+                            <span class="tag available">대출가능</span>
+                            <button class="btn-borrow" onclick="alert('대출 신청되었습니다.')">대출신청</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const btnMore = document.querySelector('.btn-more');
+        const closeBtn = document.querySelector('.close-btn');
+        btnMore.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+
+</html>

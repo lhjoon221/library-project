@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* 공통 요소 */
+.inner {
+    overflow: hidden;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+section + section {
+    padding: 150px 0;
+}
+
+/* header */
+.header {
+    overflow: hidden;
+    position: relative;
+    top: 0; left: 0;
+    width: 100%;
+}
+header .inner {
+    padding: 60px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+}
+header .inner .logo img {
+    width: 280px
+}
+header .gnb-area .gnb {
+   display: flex;
+   gap: 80px;
+}
+header .gnb-area .gnb li a {
+    display: grid;
+    font-size: 20px;
+    font-weight: 600;
+    color: #876353
+}
+
+/* main-visual */
+#main-visual .main-title {
+    word-break: keep-all;
+    background: rgba(135, 99, 83, 0.8);
+    padding: 70px 140px;
+    text-align: center;
+}
+#main-visual .main-title .slogan {
+    font-family: 'Ria';
+    font-size: 44px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#main-visual .main-title .text {
+    font-size: 26px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+}
+
+/* 책소개 */
+.book-info h2 span {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.book-info .p {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.sec-book figure {
+    width: 30%;
+}
+.sec-book figure img {
+    width: 70%;
+}
+.sec-book .book-info {
+    margin-top: 60px;
+}
+
+/* sec-sentence */
+.sentence-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.sentence-list .text {
+    font-size: 15px;
+    padding: 30px;
+}
+.sentence-list .h2 .img {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+}
+.sentence-list .li figure {
+    width: 100%;
+    margin-bottom: auto;
+}
+.section .inner .h2 {
+    font-size: 30px;
+    display: flex;
+    padding: 30px;
+}
+section .inner .text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+/* rest */
+.rest {
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #f0f6f0;
+}
+.rest .example .text {
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    font-size: 20px;
+    padding: 40px;
+}
+.rest .figure img {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    width: 90px;
+}
+.rest .h2 {
+   gap: 10px;
+   padding: 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+/* label */
+.label {
+    background: #f0f6f0;
+    display: grid;
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* footer */
+footer {
+    padding: 30px 0;
+    background: #f0f6f0;
+}
+footer .inner {
+    text-align: center;
+    font-size: 15px;
+}

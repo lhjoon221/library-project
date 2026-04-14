@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Pages Library - 도서검색</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/sub.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="index.html" class="logo-text">OPEN PAGES LIBRARY</a></h1>
+                <nav class="gnb-area">
+                    <ul class="gnb">
+                        <li><a href="search.html">도서검색</a></li>
+                        <li><a href="books.html">추천/신작</a></li>
+                        <li><a href="community.html">커뮤니티</a></li>
+                        <li><a href="guide.html">이용안내</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-bg">
+                <div class="inner">
+                    <div class="visual-txt">
+                        <h2>도서 검색</h2>
+                        <p>기록 속에 살아있는 지식의 문을 열어보세요.</p>
+                        <form class="search-form" onsubmit="return false;">
+                            <input type="text" placeholder="도서명, 저자, 출판사를 입력하세요">
+                            <button type="submit">검색</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-search-result">
+                <div class="inner">
+                    <div class="result-top">
+                        <p class="count">검색 결과 <strong>4</strong>건</p>
+                        <div class="filter">
+                            <select id="sortSelect">
+                                <option value="최신순">최신순</option>
+                                <option value="인기순">인기순</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <ul class="result-list" id="bookList">
+                        <li data-date="202403" data-popular="150">
+                            <figure class="book-img"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400"
+                                    alt="책표지"></figure>
+                            <div class="book-info">
+                                <span class="category">인문/사회</span>
+                                <h3>지식의 문을 여는 문장들</h3>
+                                <p class="author">저자: 홍길동 | 출판사: 페이지북스 | 발행일: 2024.03</p>
+                                <p class="view-count" style="font-size:13px; color:#888; margin-top:5px;">조회수:
+                                    <strong>150</strong></p>
+                                <p class="summary">함께 읽고 나누는 지식의 즐거움에 대하여 서술한 도서입니다.</p>
+                                <div class="status"><span class="tag available">대출가능</span><a href="#"
+                                        class="btn-detail">상세보기</a></div>
+                            </div>
+                        </li>
+
+                        <li data-date="202311" data-popular="300">
+                            <figure class="book-img"><img
+                                    src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=400"
+                                    alt="책표지"></figure>
+                            <div class="book-info">
+                                <span class="category">기술/공학</span>
+                                <h3>모던 자바스크립트 가이드</h3>
+                                <p class="author">저자: 김코딩 | 출판사: 테크인사이트 | 발행일: 2023.11</p>
+                                <p class="view-count" style="font-size:13px; color:#888; margin-top:5px;">조회수:
+                                    <strong>300</strong></p>
+                                <p class="summary">실무에서 바로 사용하는 최신 자바스크립트 문법을 담았습니다.</p>
+                                <div class="status"><span class="tag unavailable">대출중</span><a href="#"
+                                        class="btn-detail">상세보기</a></div>
+                            </div>
+                        </li>
+
+                        <li data-date="202401" data-popular="200">
+                            <figure class="book-img"><img
+                                    src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?q=80&w=400"
+                                    alt="책표지"></figure>
+                            <div class="book-info">
+                                <span class="category">에세이</span>
+                                <h3>오늘을 기록하는 법</h3>
+                                <p class="author">저자: 이기록 | 출판사: 감성기록 | 발행일: 2024.01</p>
+                                <p class="view-count" style="font-size:13px; color:#888; margin-top:5px;">조회수:
+                                    <strong>200</strong></p>
+                                <p class="summary">매일 반복되는 일상 속 작은 행복들을 문장으로 담아냅니다.</p>
+                                <div class="status"><span class="tag available">대출가능</span><a href="#"
+                                        class="btn-detail">상세보기</a></div>
+                            </div>
+                        </li>
+
+                        <li data-date="202604" data-popular="100">
+                            <figure class="book-img"><img
+                                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=400"
+                                    alt="책표지"></figure>
+                            <div class="book-info">
+                                <span class="category">경제/경영</span>
+                                <h3>미래 산업 리포트 2026</h3>
+                                <p class="author">저자: 박미래 | 출판사: 비전코리아 | 발행일: 2026.04</p>
+                                <p class="view-count" style="font-size:13px; color:#888; margin-top:5px;">조회수:
+                                    <strong>100</strong></p>
+                                <p class="summary">미래의 경제 흐름을 분석하고 전략을 제시합니다.</p>
+                                <div class="status"><span class="tag available">대출가능</span><a href="#"
+                                        class="btn-detail">상세보기</a></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div id="no-result" class="no-result" style="display: none; text-align: center; padding: 100px 0;">
+                        <p style="font-size: 20px; font-weight: bold;">🔍 검색 결과가 없습니다.</p>
+                        <span style="color: #888;">다른 검색어로 다시 시도해 보세요.</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <p>Open Pages library &copy; All rights reserved. 2026</p>
+            </div>
+        </footer>
+
+        <div id="bookModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left"><img src="" alt="도서 이미지" id="modalImg"></div>
+                    <div class="modal-right">
+                        <span class="m-category" id="modalCat"></span>
+                        <h2 id="modalTitle"></h2>
+                        <p class="m-info" id="modalInfo"></p>
+                        <div class="m-desc">
+                            <h4>도서 소개</h4>
+                            <p id="modalDesc"></p>
+                        </div>
+                        <div class="m-status-box"><span id="modalTag" class="tag"></span><button class="btn-borrow">대출
+                                예약하기</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("bookModal");
+        const closeBtn = document.querySelector(".close-btn");
+        const searchInput = document.querySelector(".search-form input");
+        const searchBtn = document.querySelector(".search-form button");
+        const bookList = document.getElementById("bookList");
+        const listItems = document.querySelectorAll(".result-list li");
+        const countText = document.querySelector(".count strong");
+        const sortSelect = document.getElementById("sortSelect");
+
+        function openBookModal(card) {
+            document.getElementById("modalTitle").innerText = card.querySelector("h3").innerText;
+            document.getElementById("modalImg").src = card.querySelector(".book-img img").src;
+            document.getElementById("modalCat").innerText = card.querySelector(".category").innerText;
+            document.getElementById("modalInfo").innerText = card.querySelector(".author").innerText;
+            document.getElementById("modalDesc").innerText = card.querySelector(".summary").innerText + " 이 도서는 깊이 있는 통찰력을 제공하는 추천 도서입니다.";
+            const tag = card.querySelector(".tag");
+            const mTag = document.getElementById("modalTag");
+            mTag.innerText = tag.innerText;
+            mTag.className = tag.classList.contains("available") ? "tag available" : "tag unavailable";
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function updateDisplay() {
+            const keyword = searchInput.value.toLowerCase().trim();
+            const sortType = sortSelect.value;
+            const noResultMsg = document.getElementById("no-result");
+
+            let itemsArray = Array.from(listItems);
+
+            let visibleCount = 0;
+            itemsArray.forEach(li => {
+                const title = li.querySelector("h3").innerText.toLowerCase();
+                const author = li.querySelector(".author").innerText.toLowerCase();
+                if (title.includes(keyword) || author.includes(keyword)) {
+                    li.style.display = "flex";
+                    visibleCount++;
+                } else {
+                    li.style.display = "none";
+                }
+            });
+
+            itemsArray.sort((a, b) => {
+                const valA = parseInt(sortType === "최신순" ? a.dataset.date : a.dataset.popular);
+                const valB = parseInt(sortType === "최신순" ? b.dataset.date : b.dataset.popular);
+                return valB - valA; // 내림차순 (큰 숫자가 위로)
+            });
+
+            itemsArray.forEach(item => bookList.appendChild(item));
+
+            countText.innerText = visibleCount;
+            noResultMsg.style.display = visibleCount === 0 ? "block" : "none";
+        }
+        listItems.forEach(li => {
+            li.querySelector(".book-img").style.cursor = "pointer";
+            li.querySelector("h3").style.cursor = "pointer";
+            li.querySelector(".book-img").onclick = () => openBookModal(li);
+            li.querySelector("h3").onclick = () => openBookModal(li);
+            li.querySelector(".btn-detail").onclick = (e) => { e.preventDefault(); openBookModal(li); };
+        });
+
+        searchInput.oninput = updateDisplay;
+        sortSelect.onchange = updateDisplay;
+        searchBtn.onclick = (e) => { e.preventDefault(); updateDisplay(); };
+
+        closeBtn.onclick = () => { modal.style.display = "none"; document.body.style.overflow = "auto"; };
+        window.onclick = (e) => { if (e.target == modal) { modal.style.display = "none"; document.body.style.overflow = "auto"; } };
+        window.onload = updateDisplay;
+    </script>
+</body>
+
+</html>

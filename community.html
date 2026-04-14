@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Pages Library - 커뮤니티</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/community.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="index.html" class="logo-text">OPEN PAGES LIBRARY</a></h1>
+                <nav class="gnb-area">
+                    <ul class="gnb">
+                        <li><a href="search.html">도서검색</a></li>
+                        <li><a href="books.html">추천/신작</a></li>
+                        <li><a href="community.html">커뮤니티</a></li>
+                        <li><a href="guide.html">이용안내</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="visual-common community-bg">
+                <div class="inner">
+                    <div class="visual-txt">
+                        <h2>커뮤니티</h2>
+                        <p>책을 사랑하는 사람들과 자유롭게 소통하고 이야기를 나눠보세요.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-community">
+                <div class="inner container">
+                    <div class="sec-title">
+                        <h3>자유게시판</h3>
+                        <p>도서관 이용 후기나 독서 기록을 남겨주세요.</p>
+                    </div>
+
+                    <div class="board-ctrl">
+                        <p>전체 글 <span>128</span>개</p>
+                        <div class="ctrl-right">
+                            <select name="sort" id="sortSelect">
+                                <option value="latest">최신순</option>
+                                <option value="views">조회순</option>
+                            </select>
+                            <a href="write.html" class="btn-write">글쓰기</a>
+                        </div>
+                    </div>
+
+                    <table class="board-list">
+                        <colgroup>
+                            <col style="width: 80px;">
+                            <col style="width: auto;">
+                            <col style="width: 120px;">
+                            <col style="width: 150px;">
+                            <col style="width: 100px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>날짜</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td class="tit"><a href="#">도서관 커뮤니티 이용 수칙 안내</a></td>
+                                <td>관리자</td>
+                                <td>2026.04.10</td>
+                                <td>999+</td>
+                            </tr>
+                            <tr>
+                                <td>128</td>
+                                <td class="tit">
+                                    <a href="write.html">'잊혀진 문장들의 기록' 읽어보신 분 계신가요?</a>
+                                    <span class="icon-new">NEW</span>
+                                </td>
+                                <td>임형준</td>
+                                <td>2026.04.13</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>127</td>
+                                <td class="tit">
+                                    <a href="#">코딩 관련 서적들 많이 들어와서 좋네요 ㅋㅋ</a>
+                                    <span class="icon-new">NEW</span>
+                                </td>
+                                <td>웹꿈나무</td>
+                                <td>2026.04.12</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>126</td>
+                                <td class="tit"><a href="#">오늘 KIA 타이거즈 경기 결과 아시는 분?</a></td>
+                                <td>야구팬</td>
+                                <td>2026.04.12</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>125</td>
+                                <td class="tit"><a href="#">자취생을 위한 간단 요리책 추천받아요!</a></td>
+                                <td>자취9단</td>
+                                <td>2026.04.11</td>
+                                <td>38</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <a href="#" class="prev">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next">&gt;</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <p>Open Pages library &copy; All rights reserved. 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const sortSelect = document.getElementById('sortSelect');
+        const boardBody = document.querySelector('.board-list tbody');
+
+        sortSelect.addEventListener('change', function () {
+            const rows = Array.from(boardBody.querySelectorAll('tr:not(.notice)'));
+
+            if (this.value === 'views') {
+                rows.sort((a, b) => {
+                    const viewA = parseInt(a.cells[4].innerText); 
+                    const viewB = parseInt(b.cells[4].innerText);
+                    return viewB - viewA;
+                });
+            } else {
+                rows.sort((a, b) => {
+                    const numA = parseInt(a.cells[0].innerText);
+                    const numB = parseInt(b.cells[0].innerText);
+                    return numB - numA;
+                });
+            }
+            rows.forEach(row => boardBody.appendChild(row));
+        });
+    </script>
+</body>
+
+</html>

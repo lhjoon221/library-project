@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Pages Library - 글쓰기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/community.css"> 
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="index.html" class="logo-text">OPEN PAGES LIBRARY</a></h1>
+                <nav class="gnb-area">
+                    <ul class="gnb">
+                        <li><a href="search.html">도서검색</a></li>
+                        <li><a href="books.html">추천/신작</a></li>
+                        <li><a href="community.html">커뮤니티</a></li>
+                        <li><a href="guide.html">이용안내</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container write-main">
+            <div class="write-header">
+                <h2>새 글 작성</h2>
+            </div>
+
+            <form class="write-form">
+                <div class="input-group">
+                    <label>제목</label>
+                    <input type="text" placeholder="제목을 입력하세요" class="in-title">
+                </div>
+
+                <div class="input-group">
+                    <label>내용</label>
+                    <textarea placeholder="책에 대한 생각을 자유롭게 남겨주세요" class="in-content"></textarea>
+                </div>
+
+                <div class="write-btns">
+                    <a href="community.html" class="btn-sub">취소</a>
+                    <button type="button" class="btn-write" onclick="location.href='community.html'">등록하기</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <p>Open Pages library &copy; All rights reserved. 2026</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

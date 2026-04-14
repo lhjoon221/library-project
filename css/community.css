@@ -1,0 +1,220 @@
+@charset "UTF-8";
+#wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.community-bg {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+    margin-bottom: 60px;
+    color: #fff;
+    text-align: center;
+    padding-top: 110px;
+    box-sizing: border-box;
+}
+
+.community-bg h2 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.sec-title {
+    margin-bottom: 40px;
+}
+
+.sec-title h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.sec-title p {
+    color: #888;
+    font-size: 15px;
+}
+.board-ctrl {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+}
+
+.board-ctrl p {
+    font-size: 15px;
+    color: #666;
+}
+
+.board-ctrl p span {
+    color: #876353;
+    font-weight: 700;
+}
+
+.ctrl-right {
+    display: flex;
+    gap: 10px;
+}
+.ctrl-right select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.ctrl-right select:focus {
+    border-color: #876353;
+}
+
+.btn-write {
+    padding: 10px 25px;
+    background: #876353;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-write:hover {
+    background: #5d4037;
+}
+.board-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.board-list th {
+    padding: 15px 0;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    color: #333;
+}
+
+.board-list td {
+    padding: 18px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 15px;
+}
+
+.board-list tbody tr:hover {
+    background-color: #fcfcfc;
+    cursor: pointer;
+}
+
+.board-list td.tit {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.board-list td.tit a {
+    color: #333;
+    transition: 0.2s;
+    display: inline-block; 
+}
+
+.board-list td.tit a:hover {
+    color: #876353;
+    text-decoration: underline;
+}
+.icon-new {
+    display: inline-block;
+    background: #ff4757;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.board-list tr.notice {
+    background: #fff9f6;
+}
+
+.board-list tr.notice td:first-child {
+    font-weight: 700;
+    color: #876353;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.pagination a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.pagination a.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.6;
+}
+@media screen and (max-width: 412px) {
+    .board-list th:nth-child(1),
+    .board-list th:nth-child(4),
+    .board-list th:nth-child(5),
+    .board-list td:nth-child(1),
+    .board-list td:nth-child(4),
+    .board-list td:nth-child(5) {
+        display: none;
+    }
+
+    .board-ctrl p {
+        display: none;
+    }
+}

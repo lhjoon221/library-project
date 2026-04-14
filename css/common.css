@@ -1,0 +1,61 @@
+@charset "utf-8";
+:root {
+    --point-color: #876353;
+    --bg-light: #f9f7f4;
+    --text-dark: #333;
+    --text-gray: #666;
+    --white: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul, li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+header .inner {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo .logo-text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+}
+header .gnb {
+    display: flex;
+    gap: 50px;
+}
+header .gnb a {
+    font-size: 17px;
+    color: var(--white);
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+header .gnb a:hover {
+    color: #ccc;
+    border-bottom-color: var(--white);
+}
+
+/* [ 푸터 공통 ] */
+footer {
+    background-color: #2a2a2a;
+    color: #888;
+    padding: 80px 0;
+    text-align: center;
+}
