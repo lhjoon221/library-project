@@ -329,3 +329,130 @@
     font-size: 16px;
     color: #aaa;
 }
+/* Library Search Page Mobile Responsive - 430px */
+
+@media screen and (max-width: 430px) {
+    /* 1. 상단 비주얼 영역 */
+    .search-bg {
+        height: 300px;
+        padding-top: 90px;
+        margin-bottom: 40px;
+    }
+
+    .visual-txt h2 {
+        font-size: 28px;
+    }
+
+    .visual-txt p {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    /* 2. 검색창 (버튼과 인풋 정렬) */
+    .search-form {
+        max-width: 90%;
+        padding: 5px;
+        flex-direction: row; /* 한 줄 유지하되 크기 조절 */
+    }
+
+    .search-form input {
+        padding: 0 15px;
+        font-size: 14px;
+        flex: 1;
+    }
+
+    .search-form button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* 3. 결과 상단 필터/카운트 */
+    .sec-search-result {
+        padding: 50px 0;
+    }
+
+    .result-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* 4. 도서 리스트 (가로 배치를 세로로!) */
+    .result-list li {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .book-img {
+        flex: none;
+        width: 140px; /* 이미지 크기 축소 */
+        height: 200px;
+        margin: 0 auto; /* 이미지 중앙 정렬 */
+    }
+
+    .book-info {
+        text-align: center;
+    }
+
+    .book-info h3 {
+        font-size: 20px;
+    }
+
+    .book-info .summary {
+        font-size: 14px;
+        -webkit-line-clamp: 3; /* 모바일에서는 3줄만 표시 */
+    }
+
+    .status {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* 5. 모달 팝업 최적화 (가장 중요) */
+    .modal-body {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        max-height: 80vh; /* 화면을 넘지 않게 조정 */
+        overflow-y: auto; /* 내용 많으면 스크롤 */
+    }
+
+    .modal-left {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-left img {
+        width: 150px; /* 모달 안의 이미지 크기 축소 */
+        height: 220px;
+    }
+
+    .modal-right {
+        text-align: center;
+    }
+
+    #modalTitle {
+        font-size: 22px;
+    }
+
+    .m-status-box {
+        justify-content: center;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+    }
+
+    /* 6. 결과 없음 안내 */
+    .no-result {
+        padding: 60px 0;
+    }
+
+    .no-result p {
+        font-size: 18px;
+    }
+}

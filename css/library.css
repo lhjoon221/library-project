@@ -273,3 +273,141 @@ footer p {
     font-size: 15px;
     letter-spacing: 1px;
 }
+
+/* 모바일 */
+
+@media screen and (max-width: 430px) {
+    /* 1. 헤더 & 로고 */
+    header .inner {
+        height: 80px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header .logo .logo-text {
+        font-size: 20px;
+    }
+
+    /* 2. 네비게이션 메뉴 (한 줄 고정 핵심) */
+    header .gnb-area {
+        width: 100%;
+    }
+
+    header .gnb {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+        width: 100%;
+    }
+
+    header .gnb a {
+        font-size: 13px;
+        padding-bottom: 3px;
+        white-space: nowrap;
+        letter-spacing: -0.5px;
+    }
+
+    /* 3. 메인 비주얼 (슬로건) */
+    #main-visual {
+        height: 500px;
+    }
+
+    .main-title .slogan {
+        font-size: 28px;
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    .main-title .text {
+        font-size: 15px;
+        padding: 0 10px;
+        color: white;
+        font-weight: 500;
+    }
+
+    /* 4. 소개 섹션 (이미지와 텍스트를 위아래로) */
+    .sec-book {
+        padding: 80px 0;
+    }
+
+    .sec-book .inner {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sec-book .thumb {
+        flex: none;
+        width: 100%;
+    }
+
+    .sec-book .book-info {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sec-book .book-info h2 {
+        font-size: 26px;
+    }
+
+    .sec-book .book-info .desc {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* 5. 문장 리스트 (카드들을 세로로 나열) */
+    .sec-sentence {
+        padding: 80px 0;
+    }
+
+    .sentence-list {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sentence-list figure {
+        height: 200px;
+    }
+
+    .sentence-list .txt-box {
+        padding: 25px 20px;
+    }
+
+    .sentence-list .txt-box p {
+        font-size: 16px;
+    }
+
+    /* 6. 리뷰 섹션 */
+    .sec-review {
+        padding: 80px 0;
+    }
+
+    .sec-review .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .review-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-card {
+        padding: 30px 20px;
+    }
+
+    .review-card p {
+        font-size: 15px;
+    }
+
+    /* 7. 푸터 */
+    footer {
+        padding: 50px 0;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}

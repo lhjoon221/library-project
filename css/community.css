@@ -10,7 +10,7 @@
     padding: 0 20px;
 }
 .community-bg {
-    height: 350px;
+    height: 350px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +20,9 @@
     margin-bottom: 60px;
     color: #fff;
     text-align: center;
-    padding-top: 110px;
+    padding-top: 110px; 
     box-sizing: border-box;
 }
-
 .community-bg h2 {
     font-size: 2.8rem;
     letter-spacing: 2px;
@@ -204,17 +203,87 @@ footer p {
     font-size: 14px;
     opacity: 0.6;
 }
-@media screen and (max-width: 412px) {
-    .board-list th:nth-child(1),
-    .board-list th:nth-child(4),
-    .board-list th:nth-child(5),
-    .board-list td:nth-child(1),
-    .board-list td:nth-child(4),
-    .board-list td:nth-child(5) {
+
+
+/* 모바일 */
+
+@media screen and (max-width: 430px) {
+    .board-list colgroup {
         display: none;
     }
 
-    .board-ctrl p {
+    .community-bg {
+        height: 300px;
+        padding-top: 90px;
+        margin-bottom: 40px;
+    }
+    
+    .visual-txt h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .visual-txt p {
+        font-size: 14px; 
+        white-space: nowrap;
+        letter-spacing: -0.5px; 
+        width: 100%;
+        text-align: center;
+    }
+    .board-list {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    /* 3. 불필요한 열 숨기기 */
+    .board-list th:nth-child(1), .board-list td:nth-child(1), 
+    .board-list th:nth-child(4), .board-list td:nth-child(4),
+    .board-list th:nth-child(5), .board-list td:nth-child(5) {
         display: none;
+    }
+
+    .board-list th:nth-child(2), 
+    .board-list td:nth-child(2) {
+        display: table-cell;
+        width: 75%;
+        padding: 15px 10px;
+        text-align: left;
+    }
+    .board-list th:nth-child(3), 
+    .board-list td:nth-child(3) {
+        display: table-cell;
+        width: 25%;
+        font-size: 13px;
+        color: #888;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .board-list td.tit a {
+        font-size: 14px;
+        line-height: 1.5;
+        display: inline; 
+        word-break: keep-all; 
+    }
+
+    .board-ctrl { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    .board-ctrl p { 
+        display: none; 
+    }
+    .ctrl-right { 
+        display: flex; 
+        width: 100%; 
+        gap: 10px; 
+    }
+    .ctrl-right select, .btn-write { 
+        flex: 1; 
+        height: 45px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
     }
 }

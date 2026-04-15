@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .guide-bg {
-    height: 350px;
+    height: 350px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,11 +10,12 @@
     margin-bottom: 60px;
     color: #fff;
     text-align: center;
-    padding-top: 110px;
+    padding-top: 110px; 
     box-sizing: border-box;
 }
 .visual-txt h2 {
     font-size: 2.8rem;
+    font-family: 'Noto Serif KR', serif;
 }
 .sec-guide {
     padding-bottom: 100px;
@@ -75,19 +76,76 @@
     width: 100%;
     height: 100%;
 }
-@media screen and (max-width: 412px) {
+
+/* 모바일 */
+@media screen and (max-width: 430px) {
+    /* 1. 상단 비주얼 */
+    .guide-bg {
+        height: 300px;
+        padding-top: 90px;
+        margin-bottom: 40px;
+    }
+
+    .visual-txt h2 {
+        font-size: 2rem;
+    }
+    .visual-txt p {
+        font-size: 14px; 
+        white-space: nowrap;
+        letter-spacing: -0.5px; 
+        width: 100%;
+        text-align: center;
+    }
+    /* 2. 가이드 타이틀 (왼쪽 선 포인트) */
+    .guide-title {
+        margin-bottom: 15px;
+    }
+
+    .guide-title h3 {
+        font-size: 19px;
+    }
+
+    /* 3. 가이드 테이블 (위아래로 쌓기) */
+    .guide-table {
+        border-top: 1px solid #333;
+    }
+
+    .guide-table tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #eee;
+    }
+
     .guide-table th {
-        width: 35%;
-        padding: 15px 10px;
+        width: 100%;
+        background: #fdfaf9;
+        padding: 12px 15px;
         font-size: 14px;
+        border-bottom: none;
+        color: #876353;
     }
 
     .guide-table td {
-        padding: 15px 10px;
+        width: 100%; 
+        padding: 10px 15px 20px;
         font-size: 14px;
+        border-bottom: none;
+        line-height: 1.5;
+    }
+
+    /* 4. 오시는 길 & 지도 */
+    .address-text {
+        font-size: 14px;
+        padding: 0 5px;
+        word-break: keep-all;
     }
 
     .map-area {
         height: 250px;
+        margin-top: 10px;
+    }
+
+    .sec-guide {
+        padding-bottom: 60px;
     }
 }

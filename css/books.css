@@ -349,17 +349,151 @@
     border-color: #333;
 }
 
-@media (max-width: 1024px) {
-    .recommend-box {
-        flex-direction: column;
+/* Library Books Page Mobile Responsive - 430px */
+
+@media screen and (max-width: 430px) {
+    /* 1. 상단 비주얼 */
+    .books-bg {
+        height: 300px;
+        padding-top: 90px;
+        margin-bottom: 40px;
     }
-    
-    .rec-img {
-        flex: 0 0 300px;
+
+    .visual-txt h2 {
+        font-size: 28px;
+    }
+
+    .visual-txt p {
+        font-size: 14px; 
+        white-space: nowrap;
+        letter-spacing: -0.5px; 
         width: 100%;
+        text-align: center;
+        color: white;
+        font-weight: 500;
     }
-    
+
+    /* 2. 섹션 타이틀 */
+    .sec-title {
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+
+    .sec-title h3 {
+        font-size: 26px;
+    }
+
+    /* 3. 이달의 추천 도서 (큰 박스) */
+    .sec-recommend {
+        padding: 60px 0;
+    }
+
+    .recommend-box {
+    display: flex;
+    flex-direction: column; 
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+    .rec-img {
+    flex: none;
+    width: 100%;
+    height: 300px; 
+}
+
+    .rec-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+    .rec-txt {
+    flex: none;
+    width: 100%;
+    padding: 30px 20px; 
+    text-align: center;
+}
+
+    .rec-txt h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+
+    .quote {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 15px;
+    border-left: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; 
+}
+    .btn-more {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0;
+}
+    .sec-new-books {
+        padding: 60px 0;
+    }
+
     .new-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .book-card {
+        padding: 10px;
+    }
+
+    .thumb {
+        height: 300px;
+    }
+
+    .info h5 {
+        font-size: 18px;
+    }
+
+    /* 5. 모달 상세 정보 (검색 페이지와 동일한 최적화) */
+    .modal-body {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .modal-left {
+        flex: none;
+        text-align: center;
+    }
+
+    .modal-left img {
+        width: 140px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .modal-right {
+        text-align: center;
+    }
+
+    #modalTitle {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .m-status-box {
+        justify-content: center;
+    }
+
+    /* 6. 전체보기 버튼 */
+    .btn-view-all {
+        width: 80%;
+        padding: 12px 0;
     }
 }
